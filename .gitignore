@@ -1,0 +1,5 @@
+a.out
+*.gc*
+*.o
+*.html
+*.css

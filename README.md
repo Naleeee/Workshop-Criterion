@@ -50,21 +50,87 @@ A default entry point is provided, no need to declare a main unless you want to 
 
 Unified interface between C and C++: include the criterion header and it just works.
 
-Every tests can be classified in groups and in multiple files.
+Every tests must be classified in suites and in multiple files.
 
 </details>
 
 <details>
 <summary>Cheatsheet</summary>
 
+## Cheatsheet
+
 The 2 main assertions provided by Criterion are **cr_assert_XX** and **cr_expect_XX**.
 
 An cr_expect will continue even if one assertion fail in test which I don't recommended where an cr_assert will mark the test as failed and go to the next one.
 
-Here is a non-exhaustive list of assertions:
+### Common assertions
 
-| Assertion | Purpose | How to use |
+Those assertions are the basic ones.
+
+They are mostly used fro int tests.
+
+Here is a list of available assertions:
+
+| Assertion | Purpose | Description |
 | --------- | ------- | ---------- |
-| cr_assert_eq(actual, expected) | Check if value is actual is equal to value of expected| 
+| cr_assert_eq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_ne(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_lt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_le(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_gt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_ge(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_null(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_not_null(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+
+<br/>
+
+### String assertions
+
+The specification "str_" must be added to the assertion.
+
+For exemple "cr_assert_eq()" will become "cr_assert_str_eq()" to check equality between strings.
+
+**THIS DOESN'T WORK FOR EVERY PREVIOUS ASSERTION**
+
+Here is a list of available assertions:
+
+| Assertion | Purpose | Description |
+| --------- | ------- | :--------: |
+| cr_assert_str_empty(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to str <span style="color: yellow;">expected</span> | 
+| cr_assert_str_not_empty(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_eq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_neq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_lt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_leq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_gt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+| cr_assert_ge(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to value of <span style="color: yellow;">expected</span> | 
+
+<br/>
+
+### Useful Criterion tools
+
+| Name | Description |
+| ---- | ----------- |
+| cr_log_warn(<span style="color: yellow">message</span>) | Display a <span style="color: yellow">message</span> as a warning type while testing |
+| cr_log_error(<span style="color: red">message</span>) | Display a <span style="color: red">message</span> as an error type while testing |
+| .init | Display a <span style="color: red">message</span> as an error type while testing |
+| .fini | Display a <span style="color: red">message</span> as an error type while testing |
+| .signal | Display a <span style="color: red">message</span> as an error type while testing |
+</details>
+
+<details>
+<summary>Compilation</summary>
+
+list of useful args:
+-h
+-q
+-v
+-l
+-S
+--verbose
+--debug=[tool]
+--debug=[gdb]
 
 </details>
+
+TestSuite()

@@ -7,12 +7,6 @@ Test(Addition, Basic)
 {
     int res = basicAddition(4, 6);
 
-    cr_log_info("This is an informational message. They are not displayed "
-        "by default.");
-    cr_log_warn("This is a warning. They indicate some possible malfunction "
-        "or misconfiguration in the test.");
-    cr_log_error("This is an error. They indicate serious problems and "
-        "are usually shown before the test is aborted.");
     cr_assert_eq(res, 10);
 }
 

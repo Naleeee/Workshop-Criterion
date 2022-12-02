@@ -16,7 +16,6 @@ int multipleSubstraction(int x, int y, int z)
     }
     result -= y;
 
-    printf("%d\n", result);
     return result;
 }
 

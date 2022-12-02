@@ -8,7 +8,7 @@ The purpose of this workshop is to understand:
 
 - What is Criterion
 - How to create coverage on our code
-- A [cheatsheet]("./Cheatsheet.md") of different assertions
+- A [cheatsheet](./Cheatsheet.md) of different assertions
 - How to use basic assertions for unit and integration tests
 - How to implement tests in a **Makefile**
 
@@ -38,7 +38,7 @@ Test are isolated in their own process, crashes and signals can be reported and 
 
 Runs on Linux, FreeBSD, macOS, and Windows (Compiling with MinGW GCC and Visual Studio 2015+).
 
-Please refer to the [cheatsheet](./Cheatsheet) for a non exhaustive list of the assertions available.
+Please refer to the [cheatsheet](./Cheatsheet.md) for a non exhaustive list of the assertions available.
 
 <br/>
 

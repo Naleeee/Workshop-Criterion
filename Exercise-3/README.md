@@ -13,3 +13,5 @@ The purpose of this exercise is to automate the previous tests via a makefile an
 - Tests are important but display your current lines and branches coverage of your code is also very important. Using gcovr add a rule named `coverage` which will display those informations.
 
 - A fancy feature of gcovr is to create a web overview of your current code. By using the [cheatsheet](../Cheatsheet.md) add a rule named `html` which generate your own page.
+
+![Html version](../Assets/HtmlTests.png)

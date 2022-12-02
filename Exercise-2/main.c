@@ -7,13 +7,13 @@ int main(void)
     person_t *carol = malloc(sizeof(person_t));
     person_t *axel = malloc(sizeof(person_t));
 
-    jack->name = "jack";
+    jack->name = "Jack";
     jack->style= "Action";
 
-    carol->name = "jack";
+    carol->name = "Carol";
     carol->style= "Action";
 
-    axel->name = "jack";
+    axel->name = "Axel";
     axel->style= "Sci-Fi";
 
     // Get the most wanted movie style
@@ -27,4 +27,5 @@ int main(void)
 
     // Choose the pop corn
     char *food = popCornTaste("sweet");
+    printf("The final movie is %s, it is a %s movie and we have delicious %s popcorn.\n", movie, style, food);
 }

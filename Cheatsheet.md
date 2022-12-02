@@ -37,12 +37,13 @@ Here is a list of available assertions:
 | --------- | :-----: | -------- |
 | cr_assert_str_empty(<span style="color: blue;">actual</span>) | <span style="color: blue;">actual</span> == ""| Check if string <span style="color: blue;">actual</span> is <span style="color: red;">empty</span> |
 | cr_assert_str_not_empty(<span style="color: blue;">actual</span>) | <span style="color: blue;">actual</span> != "" | Check if <span style="color: blue;">actual</span> is not <span style="color: red;">empty</span> | 
-| cr_assert_eq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to <span style="color: yellow;">expected</span> | 
+| cr_assert_str_eq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> == <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is equal to <span style="color: yellow;">expected</span> | 
 | cr_assert_str_neq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> != <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is not equal to <span style="color: yellow;">expected</span> | 
-| cr_assert_lt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> < <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is lower to <span style="color: yellow;">expected</span> | 
-| cr_assert_leq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> <= <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is lower or equal to <span style="color: yellow;">expected</span> | 
-| cr_assert_gt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> > <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is greater to <span style="color: yellow;">expected</span> | 
-| cr_assert_geq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> >= <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is greater or equal to <span style="color: yellow;">expected</span> | 
+| cr_assert_str_lt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> < <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is lower to <span style="color: yellow;">expected</span> | 
+| cr_assert_str_leq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> <= <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is lower or equal to <span style="color: yellow;">expected</span> | 
+| cr_assert_str_gt(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> > <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is greater to <span style="color: yellow;">expected</span> | 
+| cr_assert_str_geq(<span style="color: blue;">actual</span>, <span style="color: yellow;">expected</span>) | <span style="color: blue;">actual</span> >= <span style="color: yellow;">expected</span> | Check if <span style="color: blue;">actual</span> is greater or equal to <span style="color: yellow;">expected</span> | 
+| cr_assert_stdout_eq_str(<span style="color: blue;">value</span>) | <span style="color: blue;">value</span> == <span style="color: red;">stdout</span> | Check if <span style="color: blue;">value</span> is equal to the curent <span style="color: red;">stdout</span> of the test |
 
 <br/>
 
@@ -50,12 +51,14 @@ Here is a list of available assertions:
 
 | Name | Description |
 | ---- | ----------- |
+| .init = &<span style="color: blue">fptr</span> | Must be added to the prototype. Execute the <span style="color: blue">fptr</span> passed before the test |
+| .fini = &<span style="color: blue">fptr</span> | Must be added to the prototype. Execute the <span style="color: blue">fptr</span> passed after the test |
+| .signal = <span style="color: blue">SIGNAL</span> | Specify the <span style="color: blue">SIGNAL</span> to catch in a test |
 | cr_log_info(<span style="color: blue">message</span>) | Display a <span style="color: blue">message</span> as an info type, not displayed unless `--verbose` is specified |
 | cr_log_warn(<span style="color: yellow">message</span>) | Display a <span style="color: yellow">message</span> as a warning type |
 | cr_log_error(<span style="color: red">message</span>) | Display a <span style="color: red">message</span> as an error type |
-| .init = &<span style="color: blue">fptr</span> | Must be added to the prototype. Execute the <span style="color: blue">fptr</span> passed before the test |
-| .fini = &<span style="color: blue">fptr</span> | Must be added to the prototype. Execute the <span style="color: blue">fptr</span> passed after the test |
-| .signal | Display a <span style="color: red">message</span> as an error type while testing |
+| cr_redirect_stdout() | Redirect every <span style="color: red;">stdout</span> in the test |
+| cr_redirect_sterr() | Redirect every <span style="color: red;">stdout</span> in the test |
 
 ### Examples:
 

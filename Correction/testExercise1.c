@@ -1,4 +1,4 @@
-#include "../../Exercice-1/include/exercise1.h"
+#include "../include/exercise1.h"
 #include <criterion/criterion.h>
 
 Test(TheStory, FindABill)
@@ -22,7 +22,7 @@ Test(TheStory, GrandmaGift)
     int breadPrice = 1;
     int price = gamePrice + breadPrice;
     int myMoney = 14;
-    int res = thanksGrandma(14);
+    int res = thanksGrandma(myMoney);
 
     cr_assert_gt(res, price);
 }
@@ -30,7 +30,7 @@ Test(TheStory, GrandmaGift)
 Test(TheStory, BuyTheGame)
 {
     int myMoney = 64;
-    int res = addOrRemoveMoney(-60, myMoney);
+    myMoney = addOrRemoveMoney(-60, myMoney);
 
     cr_assert_geq(canIBuyABread(myMoney), 1);
 }

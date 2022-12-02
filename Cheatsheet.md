@@ -29,7 +29,7 @@ Here is a list of available assertions:
 
 The specification "str_" must be added to the assertion.
 
-For exemple "cr_assert_eq()" will become "cr_assert_str_eq()" to check equality between strings.
+For example "cr_assert_eq()" will become "cr_assert_str_eq()" to check equality between strings.
 
 Here is a list of available assertions:
 
@@ -61,7 +61,7 @@ Here is a list of available assertions:
 
 #### .init / .fini
 
-![InitFiniExemple](./Assets/InitFini.png)
+![InitFiniExample](./Assets/InitFini.png)
 
 Result:
 
@@ -69,7 +69,7 @@ Result:
 
 #### .signal
 
-![SignalFiniExemple](./Assets/Signal.png)
+![SignalFiniExample](./Assets/Signal.png)
 
 <br/>
 

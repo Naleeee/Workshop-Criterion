@@ -23,4 +23,4 @@ Let's consider you have 4 dollars in your pocket.
 
 Now that you have a fresh bread and a new video game, you can go back home to try it out !
 
-![Gaming](../Assets/Gaming.png)
+<p align="center"> <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Graphics+Library/27-05-2022-Videogames-climate-05.jpg/image770x420cropped.jpg"/></p>

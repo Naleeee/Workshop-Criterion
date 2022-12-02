@@ -1,5 +1,6 @@
 #include "../include/exercise1.h"
 #include <criterion/criterion.h>
+#include <criterion/internal/assert.h>
 #include <criterion/internal/test.h>
 
 Test(Addition, Basic)

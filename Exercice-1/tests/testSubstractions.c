@@ -2,6 +2,7 @@
 #include <criterion/criterion.h>
 #include <criterion/internal/assert.h>
 #include <criterion/internal/test.h>
+#include <stdio.h>
 
 Test(Substraction, Basic)
 {
@@ -28,5 +29,5 @@ Test(Substraction, multipleBig)
 {
     int res = multipleSubstraction(31, 64, 300);
 
-    cr_assert_leq(res, 1000);
+    cr_assert_gt(res, 1000);
 }

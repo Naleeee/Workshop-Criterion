@@ -1,4 +1,4 @@
-#include "../../Exercice-1/include/exercise1.h"
+#include "../include/exercise1.h"
 #include <criterion/criterion.h>
 
 Test(TheStory, FindABill)

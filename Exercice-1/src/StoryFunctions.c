@@ -5,7 +5,7 @@ int addOrRemoveMoney(int value, int currentMoney)
     return currentMoney + value;
 }
 
-int howMuchForAGame(int gamePrice, int currentMoney)
+int canIBuyAGame(int gamePrice, int currentMoney)
 {
     if (gamePrice > currentMoney) {
         return 1;

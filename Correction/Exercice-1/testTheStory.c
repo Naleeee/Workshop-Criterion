@@ -11,9 +11,9 @@ Test(TheStory, FindABill)
 Test(TheStory, CanIBuyAGame)
 {
     int myMoney = 14;
-    int res = howMuchForAGame(60, myMoney);
+    int res = canIBuyAGame(60, myMoney);
 
-    cr_assert_neq(res, 60);
+    cr_assert_neq(res, 0);
 }
 
 Test(TheStory, GrandmaGift)

@@ -4,7 +4,7 @@ This exercise is here to let you use the basic assertions of Criterion by using 
 
 ## The story
 
-#### In The file `./tests/testAdditions.c` make tests about this story by using functions in `src/additions.c`.
+#### In The file `./tests/StoryTests.c` make tests about this story by using functions in `src/StoryFunctions.c`.
 
 Let's consider you have 4 dollars in your pocket.
 

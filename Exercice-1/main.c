@@ -3,4 +3,6 @@
 int main(void)
 {
     basicIntCalculations();
+
+    return 0;
 }

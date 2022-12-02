@@ -8,18 +8,18 @@ The purpose of this exercise is to make some tests with strings and functions re
 
 <p align="center"> <img src="https://i.pinimg.com/originals/54/a1/af/54a1af0cdaa84432afe503b4510980ab.jpg"/></p>
 
-Let's consider you are on holidays with some friends from over the world. Jack speak english, Carol is from Canada and Axel is latvian.
+Let's consider you are on holidays with some friends.
 
 You decide to go to the cinema. But you must agree on the movie before.
 
-Everyone is represented by a `struct person` in the [header file](./include/exercise2.h).
+Everyone is represented by a `struct person` defined in the [header file](./include/exercise2.h).
 
-It is composed by a name, language and movieStyle field.
+It is composed by a name and a movieStyle field.
 
 <br/>
 
 - First of all you must check **everyone's preferences**. Is it more:
-    - Actions
+    - Action
     - Romantic
     - Sci-fi
     - Detective
@@ -35,7 +35,7 @@ It is composed by a name, language and movieStyle field.
 
 - The choice of the movie is almost done! You must choose between "Star Wors, again another return of the jaydi" or "Whiploush, the drum smasher". **Collect the final choice** between everyone.
 
-- One friend decide to buy pop-corn he ask you to choose between salty and sweet. **Give him your answer**.
+- One friend decide to buy pop-corn he ask you to choose between salty and sweet. **Give him your answer** and verify that he didn't bought salty pop-corn.
 
 Everyone is now happy to go watch a movie with some friends! Enjoy!
 

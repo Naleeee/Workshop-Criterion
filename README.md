@@ -1,6 +1,8 @@
 # Workshop-Criterion
 
-Welcome my Criterion workshop about the basis of the framework.
+Welcome to my Criterion workshop about the basis of the framework.
+
+<br/>
 
 ## Table of contents
 
@@ -11,6 +13,8 @@ The purpose of this workshop is to understand:
 - A [cheatsheet](./Cheatsheet.md) of different assertions
 - How to use basic assertions for unit and integration tests
 - How to implement tests in a **Makefile**
+
+<br/>
 
 ## What is Criterion
 
@@ -49,6 +53,8 @@ A default entry point is provided, no need to declare a main.
 Unified interface between C and C++: include the criterion header and it just works.
 
 Every tests must be classified in suites and in multiple files.
+
+<br/>
 
 ## Coverage
 

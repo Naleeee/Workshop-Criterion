@@ -2,6 +2,8 @@
 
 The purpose of this exercise is to let you use the basic assertions of Criterion with a small exercise.
 
+<br/>
+
 ## The story
 
 #### In The file `./tests/StoryTests.c` make tests about this story by using functions in `src/StoryFunctions.c`.
@@ -12,8 +14,7 @@ Let's consider you have 4 dollars in your pocket.
 
 - You find a 10 dollars bill in the street, check your pocket to make sure **you have** 14 dollars now.
 
-
-- Then you check your phone, they just released the video game you've been waiting for the most! It cost *only* 60 euros. Check if **you can** buy it rignt now. 
+- Then you check your phone, they just released the video game you've been waiting for the most! It *only* cost 60 euros. Check if **you can buy it** rignt now. 
 
 <p align="center"> <img src="https://media.istockphoto.com/id/1366983105/photo/portrait-of-funny-senior-blonde-woman-in-sun-glasses-and-pink-sweater-on-white-background.jpg?s=612x612&w=0&k=20&c=j9IzY2eBsQ0m6Z7H_C7Pe4Payi2L6OHRRSBRON6krTc="/></p>
 
@@ -21,6 +22,6 @@ Let's consider you have 4 dollars in your pocket.
 
 - You run straight to your favorite shop to buy this awesome new game! Everything goes well but you still need to buy a bread for tonight. Check if now you have **at least** enough to buy a bread.
 
-Now that you have a fresh bread and a new video game, you can go back home to try it out !
+Now that you have a fresh bread and a new video game, you can go back home to try it out!
 
 <p align="center"> <img src="https://global.unitednations.entermediadb.net/assets/mediadb/services/module/asset/downloads/preset/Libraries/Graphics+Library/27-05-2022-Videogames-climate-05.jpg/image770x420cropped.jpg"/></p>

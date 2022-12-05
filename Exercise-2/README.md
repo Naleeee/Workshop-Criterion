@@ -1,6 +1,8 @@
 # Exercise 2
 
-The purpose of this exercise is to make some tests with strings and functions return.
+The purpose of this exercise is to make some tests with strings, stdout and functions return.
+
+<br/>
 
 ## The story
 
